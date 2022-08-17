@@ -1,27 +1,15 @@
 import { useState } from "react";
 import { Button } from "./Button";
 import { Input } from "./Input";
+import { Label } from "./Label";
 
 export function CheckboxGroup() {
-    const [check, setCheck] = useState([
-        {
-            id: 1,
-            content: 'Go out with friends'
-        },
-        {
-            id: 2,
-            content: 'Visit new places'
-        },
-        {
-            id: 3,
-            content: 'Change your clothes'
-        },
-        {
-            id: 4,
-            content: 'Spend quality time'
-        }
-    ])
+    const [check, setCheck] = useState([])
     const [options, setOptions] = useState([])
+
+    function youChoose() {
+        alert('You choosed this option')
+    }
 
     return (
         <div className="checkboxes">
@@ -39,22 +27,60 @@ export function CheckboxGroup() {
                     setCheck([...check, answer])
                 }}>
                 <ul>
-                    {
-                        check.map(item => (
-                            <li>
-                                <p>{item.content}</p>
-                                <Input
-                                    type="checkbox"
-                                    name="option"
-                                    onChange={event => {
-                                        setOptions(event.target.value)
-                                    }}
-                                    value={item.content}
-                                />
-                            </li>
-                        ))
-                    }
+                    <li>
+                        <Label>
+                            Go out with friends
+                        </Label>
 
+                        <Input
+                            type="checkbox"
+                            name="option"
+                            onChange={event => {
+                                setOptions(event.target.value)
+                            }}
+                            value='Go out with friends'
+                            onSelect={youChoose}
+                        />
+                    </li>
+                    <li>
+                        <Label>
+                            Visit new places
+                        </Label>
+                        <Input
+                            type="checkbox"
+                            name="option"
+                            onChange={event => {
+                                setOptions(event.target.value)
+                            }}
+                            value='Visit new places'
+                        />
+                    </li>
+                    <li>
+                        <Label>
+                            Change your clothes
+                        </Label>
+                        <Input
+                            type="checkbox"
+                            name="option"
+                            onChange={event => {
+                                setOptions(event.target.value)
+                            }}
+                            value='Change your clothes'
+                        />
+                    </li>
+                    <li>
+                        <Label>
+                            Go out with friends
+                        </Label>
+                        <Input
+                            type="checkbox"
+                            name="option"
+                            onChange={event => {
+                                setOptions(event.target.value)
+                            }}
+                            value='Go out with friends'
+                        />
+                    </li>
                 </ul>
                 <Button>
                     Click
@@ -75,47 +101,3 @@ export function CheckboxGroup() {
     )
 }
 
-// <Label>
-//                     Go out with friends
-//                     <Input
-//                         type="checkbox"
-//                         name="option"
-//                         onChange={event => {
-//                             setOptions(event.target.value)
-//                         }}
-//                         value='Go out with friends'
-//                     />
-//                 </Label>
-//                 <Label>
-//                     Visit new places
-//                     <Input
-//                         type="checkbox"
-//                         name="option"
-//                         onChange={event => {
-//                             setOptions(event.target.value)
-//                         }}
-//                         value='Visit new places'
-//                     />
-//                 </Label>
-//                 <Label>
-//                     Change your clothes
-//                     <Input
-//                         type="checkbox"
-//                         name="option"
-//                         onChange={event => {
-//                             setOptions(event.target.value)
-//                         }}
-//                         value='Change your clothes'
-//                     />
-//                 </Label>
-//                 <Label>
-//                     Go out with friends
-//                     <Input
-//                         type="checkbox"
-//                         name="option"
-//                         onChange={event => {
-//                             setOptions(event.target.value)
-//                         }}
-//                         value='Go out with friends'
-//                     />
-//                 </Label>
