@@ -30,7 +30,7 @@ export function Main() {
 
             <br />
             <br />
-            {mentalHealth ? <h1>Mental Health is not important</h1> : <h1>Mental Health is the most impotrant thing and we should take good care of it</h1>}
+            {mentalHealth ? <h1>Mental Health is not important 🙄</h1> : <h1>Mental Health is the most impotrant thing and we should take good care of it</h1>}
 
 
             <Button
@@ -48,7 +48,7 @@ export function Main() {
                     setMentalHealth(true)
                 }}
                 onDoubleClick={() => {
-                    alert('❗❗❗ YOUR OPINION IS WRONG ❗❗❗')
+                    alert('❗❗❗YOU SHOULD CHANGE YOUR OPINION  ❗❗❗')
                 }}
             >
                 Wrong

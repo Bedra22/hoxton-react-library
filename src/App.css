@@ -1,6 +1,7 @@
 .App {
     background-color: blanchedalmond;
     text-align: center;
+    height: 100vh;
 }
 
 
@@ -14,4 +15,83 @@
     border: none;
     border-radius: 30px;
     border-bottom: solid rgba(0, 0, 0, 0.345) 3px;
+}
+
+.input {
+    width: 200px;
+    height: 40px;
+    padding: 10px;
+    border: solid 1px gray;
+    border-radius: 30px;
+}
+
+.label-input {
+    display: grid;
+    grid-auto-flow: row;
+    margin: 10px;
+    margin-top: 50px;
+    padding: 3px;
+}
+
+.label-input Label {
+    padding: 10px;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+
+.form-solution {
+    display: grid;
+    grid-auto-flow: row;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.form-solution ul {
+    list-style-type: none;
+    margin: 20px;
+}
+
+.form-solution li {
+    margin-left: 37%;
+    text-align: center;
+    padding: 20px;
+    width: 400px;
+    border-bottom: solid rgba(128, 128, 128, 0.171) 2.5px;
+}
+
+.checkboxes ul {
+    list-style-type: none;
+    display: grid;
+    grid-auto-flow: column;
+    width: 60%;
+    margin-left: 20%;
+}
+
+.checkboxes li {
+    display: grid;
+    grid-auto-flow: row;
+    gap: 7px;
+}
+
+
+.checkboxes li p {
+    font-size: 20px;
+}
+
+.form-solution-check {
+    display: grid;
+    grid-auto-flow: row;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.form-solution-check ul {
+    list-style-type: none;
+    margin: 20px;
+}
+
+.form-solution-check li {
+    display: grid;
+    grid-auto-flow: row;
 }
